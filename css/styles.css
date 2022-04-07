@@ -5,10 +5,20 @@
           box-sizing: border-box;
 }
 
+*::-moz-selection {
+  color: #ff7e36;
+  border-color: #ff7e36;
+}
+
+*::selection {
+  color: #ff7e36;
+  border-color: #ff7e36;
+}
+
 li {
   font-family: "Roboto", sans-serif;
   font-size: 1.125rem;
-  color: #8a8a8a;
+  color: #323232;
 }
 
 a {
@@ -28,7 +38,8 @@ body {
           align-items: center;
   height: 100vh;
   width: 100%;
-  background-color: #f6f6f6;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ffd79a), color-stop(35%, #f1dbff), to(whitesmoke));
+  background: linear-gradient(0deg, #ffd79a 0%, #f1dbff 35%, whitesmoke 100%);
 }
 
 header {
@@ -64,7 +75,7 @@ header {
 .menu-item {
   cursor: pointer;
   font-family: "Roboto", sans-serif;
-  color: #8a8a8a;
+  color: #323232;
   font-size: 1.25rem;
   border-bottom: 2px solid transparent;
   -webkit-transition: ease .3s;
@@ -105,10 +116,11 @@ header {
 
 .text_default {
   font-family: "Roboto", sans-serif;
-  color: #8a8a8a;
+  color: #323232;
   font-size: 1.25rem;
   line-height: 23.44px;
   margin: 5px 0 5px 0;
+  font-weight: 300;
 }
 
 /*#endregion*/
@@ -149,7 +161,7 @@ section {
   font-family: "Roboto", sans-serif;
   font-size: 2.5rem;
   font-weight: bold;
-  color: #8a8a8a;
+  color: #323232;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -163,7 +175,7 @@ section {
   content: "";
   width: 50%;
   display: inline-block;
-  border-bottom: 1px solid #e7e7e7;
+  border-bottom: 1px solid #ff7e36;
 }
 
 .title-default-fit {
@@ -219,11 +231,11 @@ section {
   height: 50px;
   padding-left: 24px;
   text-align: left;
-  color: #8a8a8a;
+  color: #999999;
   font-size: 1.25rem;
   background-color: transparent;
   border: unset;
-  border-left: 2px solid #e7e7e7;
+  border-left: 2px solid #999999;
   -webkit-transition: ease-in-out .2s;
   transition: ease-in-out .2s;
 }
@@ -282,7 +294,7 @@ section {
   border-radius: 10px;
   height: 240px;
   width: 200px;
-  background-color: #8a8a8a;
+  background-color: #323232;
   padding: 0 10px 0 10px;
   background-position: center;
   position: relative;
@@ -298,7 +310,7 @@ section {
   border-radius: 10px;
   content: "";
   position: absolute;
-  background-color: #3f3f3f;
+  background-color: #323232;
   opacity: .4;
   z-index: -1;
   height: 100%;
@@ -403,7 +415,7 @@ section {
   font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
   font-weight: 500;
-  color: #8a8a8a;
+  color: #323232;
 }
 
 .company_subtitle {
@@ -411,7 +423,7 @@ section {
   margin-bottom: 15px;
   font-size: 0.813rem;
   font-family: "Roboto", sans-serif;
-  color: #8a8a8a;
+  color: #323232;
   font-weight: 400;
 }
 

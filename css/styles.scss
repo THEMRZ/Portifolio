@@ -2,7 +2,8 @@
 
 $black: #3f3f3f;
 $orange: #ff7e36;
-$darkGrey: #8a8a8a;
+$darkGrey: #323232;
+$grey: #999999;
 $lightGrey: #e7e7e7;
 $lightWhite: #f6f6f6;
 $lightBlue:#47c7fc;
@@ -19,6 +20,10 @@ $fontSize-default: 1.25rem;
 /*#regin General*/
 *{
   box-sizing: border-box;  
+  &::selection {
+    color: $orange;    
+    border-color: $orange;
+  }
 }
 
 li{
@@ -36,7 +41,7 @@ body {
   @include flex(flex, center, center);
   height: 100vh;
   width: 100%;
-  background-color: $lightWhite;
+  background: linear-gradient(0deg, rgba(255,215,154,1) 0%, rgba(241,219,255,1) 35%, rgba(245,245,245,1) 100%);
 }
 header {
   position: fixed;
@@ -110,6 +115,7 @@ header {
   font-size: $fontSize-default;
   line-height: 23.44px;
   margin: 5px 0 5px 0;
+  font-weight: 300;
 }
 /*#endregion*/
 
@@ -148,7 +154,7 @@ section{
   content:"";
   width: 50%;
   display: inline-block;
-  border-bottom: 1px solid $lightGrey;
+  border-bottom: 1px solid $orange;
 }
 
 .title-default-fit{
@@ -195,11 +201,11 @@ section{
   height: 50px;
   padding-left: 24px;
   text-align: left;
-  color: $darkGrey;
+  color: $grey;
   font-size: 1.25rem;
   background-color: transparent;
   border: unset;
-  border-left: 2px solid $lightGrey;  
+  border-left: 2px solid $grey;  
   transition: ease-in-out .2s;
   &:hover, &.active{
     outline: 0 !important;
@@ -258,7 +264,7 @@ section{
     border-radius: 10px;
     content:"";
     position: absolute;
-    background-color: $black;
+    background-color: $darkGrey;
     opacity: .4;
     z-index: -1;
     height: 100%;
