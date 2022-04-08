@@ -14,11 +14,11 @@ $(document).ready(function(){
     var scene = document.getElementById('background');
     var parallax = new Parallax(scene);
 
-    function getAge(dateString) {
-        var ageInMilliseconds = new Date() - new Date(dateString);
-        return Math.floor(ageInMilliseconds/1000/60/60/24/365);
-     }
-     document.getElementById('idade').textContent = (getAge('1993-11-07'));
+    // function getAge(dateString) {
+    //     var ageInMilliseconds = new Date() - new Date(dateString);
+    //     return Math.floor(ageInMilliseconds/1000/60/60/24/365);
+    //  }
+    //  document.getElementById('idade').textContent = (getAge('1993-11-07'));
   });
 
 

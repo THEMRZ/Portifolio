@@ -38,8 +38,8 @@ body {
           align-items: center;
   height: 100vh;
   width: 100%;
-  background: -webkit-gradient(linear, left bottom, left top, from(#ffd79a), color-stop(35%, #f1dbff), to(whitesmoke));
-  background: linear-gradient(0deg, #ffd79a 0%, #f1dbff 35%, whitesmoke 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#ffd79a), color-stop(35%, rgba(241, 219, 255, 0)), to(whitesmoke));
+  background: linear-gradient(0deg, #ffd79a 0%, rgba(241, 219, 255, 0) 35%, whitesmoke 100%);
 }
 
 header {
@@ -473,7 +473,7 @@ section {
 
 .background__layer .background__item {
   position: absolute;
-  opacity: .8;
+  opacity: .6;
   -webkit-box-shadow: 0 32px 40px -20px rgba(0, 0, 0, 0.25);
           box-shadow: 0 32px 40px -20px rgba(0, 0, 0, 0.25);
 }
@@ -484,7 +484,7 @@ section {
   width: 300px;
   height: 300px;
   background-color: #FF7E36;
-  opacity: .4;
+  opacity: .2;
 }
 
 .background__layer:nth-child(2) .background__item {

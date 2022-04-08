@@ -41,7 +41,7 @@ body {
   @include flex(flex, center, center);
   height: 100vh;
   width: 100%;
-  background: linear-gradient(0deg, rgba(255,215,154,1) 0%, rgba(241,219,255,1) 35%, rgba(245,245,245,1) 100%);
+  background: linear-gradient(0deg, rgba(255,215,154,1) 0%, rgba(241, 219, 255, 0) 35%, rgba(245,245,245,1) 100%);
 }
 header {
   position: fixed;
@@ -393,7 +393,7 @@ section{
     height: 800px;
   }&__layer  &__item{
     position: absolute;
-    opacity: .8;
+    opacity: .6;
     box-shadow: 0 32px 40px -20px rgba(0,0,0,.25);
   }&__layer:nth-child(1) &__item{
     top: 250px;
@@ -401,7 +401,7 @@ section{
     width: 300px;
     height: 300px;
     background-color:  #FF7E36;  
-    opacity: .4;  
+    opacity: .2;  
   }&__layer:nth-child(2) &__item{
     top: 50px;
     left: 50px;
