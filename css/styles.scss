@@ -81,6 +81,9 @@ header {
     color: $orange;    
     border-color: $orange;
   }
+  &.hightlight{
+    border-color: $orange;
+  }
 }
 
 .hightlight {

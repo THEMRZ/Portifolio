@@ -59,3 +59,8 @@ function showCompany(company){
         break;
     }
 }
+
+$(".menu-item").click(function(){
+    $(".menu-item").removeClass("hightlight")
+    $(this).addClass("hightlight")
+});

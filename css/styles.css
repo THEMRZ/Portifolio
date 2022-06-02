@@ -88,6 +88,10 @@ header {
   border-color: #ff7e36;
 }
 
+.menu-item.hightlight {
+  border-color: #ff7e36;
+}
+
 .hightlight {
   color: #ff7e36;
 }
