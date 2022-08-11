@@ -10,6 +10,8 @@ $lightBlue:#47c7fc;
 $font-roboto: "Roboto", sans-serif;
 $font-firaCode: "Fira Code", monospace;
 $fontSize-default: 1.25rem;
+$media-md: 900px;
+$media-sd: 500px;
 
 @mixin flex($display, $justify, $align) {
   display: $display;
@@ -46,7 +48,7 @@ body {
 header {
   position: fixed;
   bottom: 15%;
-  width: 900px;
+  width: 900px;  
 }
 
 .orange-text{
@@ -55,16 +57,35 @@ header {
 
 .content {
   width: 800px;
+  @media(max-width: $media-md){
+    width: 100%;
+    padding: 20px;
+  }  
+}
+
+#experiencia{
+  .content{
+    @media(max-width: $media-sd){
+      overflow: auto;
+      height: fit-content;
+    }
+  }
 }
 
 .box {
   display: flex;
+  @media(max-width: $media-md){
+    width: 100%;
+  }
 }
 
 .menu {
   display: flex;
   align-items: center;
   gap: 25px;
+  @media (max-width: $media-md){
+    display: none;
+  }
 }
 
 .menu-item {
@@ -127,19 +148,29 @@ header {
   transform-origin: top left;  
   scroll-behavior: smooth;
   overflow: hidden;
-  height: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;  
 }
 
 .frames{
   transform-origin: top left;
-  height: 400px;
+  height: fit-content;
   width: 500vw;
   display: flex;
-  margin-top: 10%;
+  gap: 100px;
+  @media (max-width: $media-sd){
+    text-align: center;
+    height: 500px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
 }
 
 section{
   width: 100vw;
+  padding: 10px;
   @include flex(flex, center, none);
 }
 
@@ -151,6 +182,10 @@ section{
   display: flex;
   align-items: center;
   margin-bottom: 30px;
+  word-wrap: break-word;
+  @media (max-width: $media-md){
+    
+  }
 }
 
 .right_line::after{
@@ -158,20 +193,32 @@ section{
   width: 50%;
   display: inline-block;
   border-bottom: 1px solid $orange;
+  @media (max-width: $media-sd){
+      display: none;
+  }
 }
 
 .title-default-fit{
   white-space: nowrap;
   margin-right: 22px;
+  @media(max-width: $media-sd){
+    white-space: unset;
+  }
 }
 
 .text_box{
   width: 700px;
   text-align: left;
+  @media(max-width: $media-md){
+    width: 100%;
+  }
 }
 
 .width_500{
   width: 500px;
+  @media(max-width: $media-sd){
+    width: 100%;
+  }
 }
 
 .list{
@@ -190,6 +237,9 @@ section{
 .flex_box{
   display: flex;
   gap: 10px;
+  @media(max-width: $media-md){
+    flex-direction: column;
+  }
 }
 
 .company_list{
@@ -237,17 +287,28 @@ section{
   height: 280px; 
   margin-top: 20px;
   margin-bottom: 20px;
+  @media(max-width: $media-md){
+    width: 100%;    
+  }
 }
 
 .slick__item{
   height: 300px;
   gap: 42px;  
+  flex-wrap: wrap;
   @include flex(flex !important, center, center);
   padding: 20px 0 20px 0;
+  @media (max-width: $media-md) {    
+    gap: 5px;
+    padding: 5px 0 5px 0;
+  }
 }
 
 .slick__company {
   height: 280px;
+  @media (max-width: $media-md){
+    height: fit-content;
+  }
 }
 
 .slick__item_company{
@@ -268,7 +329,7 @@ section{
     content:"";
     position: absolute;
     background-color: $darkGrey;
-    opacity: .4;
+    opacity: .7;
     z-index: -1;
     height: 100%;
     width: 100%;
@@ -277,6 +338,10 @@ section{
   } 
   &:hover{
     background-size: 180%;
+  }  
+  @media (max-width: $media-sd){
+    height: 200px;
+    width: 160px;
   }
 }
 
@@ -326,6 +391,9 @@ section{
   width: 400px;
   margin: 0 auto;
   text-align: center;
+  @media (max-width: $media-sd) {
+    width: 100%;
+  }
 }
 
 .contact_btn{
@@ -377,6 +445,9 @@ section{
     background-color: $orange;
     color: $lightWhite;
   }
+  &.mobile-medias__item{
+    padding: 7px;
+  }
 }
 
 .background {
@@ -417,5 +488,54 @@ section{
     width: 350px;
     height: 350px;
     background-color: #f5f5f5;
+  }
+}
+
+.menu-mobile{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background: $orange; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  @media (min-width: $media-sd) {
+    display: none;
+  }
+}
+
+.menu-mobile__nav{
+  display: flex;
+  gap: 15px;
+  padding: 0px 10px 0px 10px;
+}
+
+.menu-mobile__circle{
+  width: 30px;
+  height: 30px;
+  background: $lightWhite;
+  outline: 3px solid $orange;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all .3s;
+  &.active{
+    transform:translateY(-20px) scale(1.5);   
+  }
+}
+
+.menu-mobile-medias{
+  position: fixed;
+  top:50px;
+  list-style-type: none; 
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  @media (min-width: $media-sd) {
+    display: none;
   }
 }

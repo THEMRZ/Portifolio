@@ -64,3 +64,8 @@ $(".menu-item").click(function(){
     $(".menu-item").removeClass("hightlight")
     $(this).addClass("hightlight")
 });
+
+$(".menu-mobile__circle").click(function(){
+    $(".menu-mobile__circle").removeClass("active")
+    $(this).addClass("active")
+});
