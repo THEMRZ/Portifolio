@@ -13,6 +13,20 @@ $fontSize-default: 1.25rem;
 $media-md: 900px;
 $media-sd: 500px;
 
+@keyframes shake {
+  0% { transform:   rotate(0deg); }
+  10% { transform:  rotate(-5deg); }
+  20% { transform:  rotate(5deg); }
+  30% { transform:  rotate(0deg); }
+  40% { transform:  rotate(5deg); }
+  50% { transform:  rotate(-5deg); }
+  60% { transform:  rotate(0deg); }
+  70% { transform:  rotate(-5deg); }
+  80% { transform:  rotate(5deg); }
+  90% { transform:  rotate(0deg); }
+  100% { transform: rotate(-5deg); }
+}
+
 @mixin flex($display, $justify, $align) {
   display: $display;
   justify-content: $justify;
@@ -159,7 +173,9 @@ header {
   width: 500vw;
   display: flex;
   gap: 100px;
+  margin-bottom: 50px;
   @media (max-width: $media-sd){
+    margin-bottom: 20px;
     text-align: center;
     height: 500px;
     overflow-y: scroll;
@@ -530,12 +546,20 @@ section{
 
 .menu-mobile-medias{
   position: fixed;
-  top:50px;
+  top:30px;
   list-style-type: none; 
   display: flex;
   gap: 20px;
   align-items: center;
   @media (min-width: $media-sd) {
     display: none;
+  }
+}
+
+.shaking{
+  animation: shake 1.3s alternate;
+  animation-iteration-count: infinite;
+  &:hover{
+    animation: none;
   }
 }
